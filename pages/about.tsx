@@ -1,11 +1,11 @@
 import { toggleSidebar } from '@/actions/actions'
-import Header from '@/components/common/header'
 import { AdminLayout } from '@/components/layout'
 import { RootState } from '@/reducers'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Box, Typography } from '@mui/material'
+import { Header } from '@/components/common'
 // import dynamic from 'next/dynamic'
 
 // const Header = dynamic(() => import('@/components/common/header'), { ssr: false })
