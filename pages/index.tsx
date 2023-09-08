@@ -1,7 +1,7 @@
 import { MainLayout } from '@/components/layout'
 import { NextPageWithLayout } from '@/models/common'
+import { Box } from '@mui/material'
 import { useRouter } from 'next/dist/client/router'
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPageWithLayout = () => {
@@ -15,16 +15,7 @@ const Home: NextPageWithLayout = () => {
 			},
 		})
 	}
-	return (
-		<div className={styles.container}>
-			<Head>
-				<title>Learn NextJS | Easy Frontend</title>
-				<meta name="description" content="Learn NextJS + Typescript with fun :P" />
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-			<div className={styles.container}>Test 2</div>
-		</div>
-	)
+	return <Box>HomePage</Box>
 }
 
 Home.Layout = MainLayout

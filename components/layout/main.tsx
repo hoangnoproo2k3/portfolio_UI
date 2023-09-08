@@ -1,7 +1,8 @@
 import { LayoutProps } from '@/models/index'
 import React, { useEffect } from 'react'
 import Link from 'next/link'
-import { Stack } from '@mui/material'
+import { Box, Container, Stack } from '@mui/material'
+import { Footer, Header } from '../common'
 
 export function MainLayout({ children }: LayoutProps) {
 	useEffect(() => {
@@ -10,14 +11,27 @@ export function MainLayout({ children }: LayoutProps) {
 	}, [])
 
 	return (
-		<Stack>
-			<h1>Main Layout</h1>
-
-			<Link href="/">Home</Link>
-
-			<Link href="/about">About</Link>
-
-			<div>{children}</div>
+		<Stack minHeight="100vh">
+			<Header />
+			<Box component="main" flexGrow={1}>
+				<Container
+					maxWidth="sm"
+					sx={{
+						bgcolor: 'primary.main',
+						// '@media (min-width:600px)': {
+						// 	maxWidth: '680px',
+						// },
+					}}
+				>
+					Sm
+				</Container>
+				<Container sx={{ bgcolor: 'primary.main' }}>md</Container>
+				{children}
+				<Link href="/">Home</Link>
+				<Link href="/blog">Blog</Link>
+				<Link href="/works">Works</Link>
+			</Box>
+			<Footer />
 		</Stack>
 	)
 }
