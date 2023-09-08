@@ -14,7 +14,11 @@ const HeaderDesktop = () => {
 						<Link key={route.path} href={route.path}>
 							<Box
 								component="span"
-								sx={{ ml: 2, color: router.pathname === route.path ? 'red' : '' }}
+								sx={{
+									ml: 2,
+									color: router.pathname === route.path ? 'red' : '',
+									fontWeight: 'bold',
+								}}
 							>
 								{route.lable}
 							</Box>

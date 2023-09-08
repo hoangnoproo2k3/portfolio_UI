@@ -1,5 +1,5 @@
 import { Roboto } from 'next/font/google'
-import { createTheme } from '@mui/material/styles'
+import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 import { red } from '@mui/material/colors'
 
 export const roboto = Roboto({
@@ -9,19 +9,23 @@ export const roboto = Roboto({
 })
 
 // Create a theme instance.
-export const theme = createTheme({
+export let theme = createTheme({
 	typography: {
 		fontFamily: 'Heebo, sans-serif',
 	},
 	palette: {
 		primary: {
-			main: '#556cd6',
+			main: '#FF6464',
 		},
 		secondary: {
 			main: '#19857b',
+			light: '#EDF7FA',
 		},
 		error: {
 			main: red.A400,
+		},
+		text: {
+			primary: '#21243D',
 		},
 	},
 
@@ -43,5 +47,22 @@ export const theme = createTheme({
 				},
 			},
 		},
+		MuiButton: {
+			variants: [
+				{
+					props: { variant: 'contained', color: 'primary' },
+					style: {
+						color: 'white',
+					},
+				},
+			],
+		},
 	},
 })
+theme = responsiveFontSizes(theme)
+// theme.typography.h3 = {
+// 	fontSize: '2rem',
+// 	[theme.breakpoints.up('md')]: {
+// 		fontSize: '3rem',
+// 	},
+// }
