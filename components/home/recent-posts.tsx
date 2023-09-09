@@ -16,7 +16,7 @@ export const RecentPosts = () => {
 				'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
 		},
 		{
-			id: 1,
+			id: 2,
 			title: 'Creating pixel perfect icons in Figma',
 			publishedDate: '1694272977816',
 			tagList: ['Figma', 'Icon Design'],

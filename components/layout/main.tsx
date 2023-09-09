@@ -1,7 +1,6 @@
 import { LayoutProps } from '@/models/index'
-import React, { useEffect } from 'react'
-import Link from 'next/link'
-import { Box, Container, Stack } from '@mui/material'
+import { Box, Stack } from '@mui/material'
+import { useEffect } from 'react'
 import { Footer, Header } from '../common'
 
 export function MainLayout({ children }: LayoutProps) {
