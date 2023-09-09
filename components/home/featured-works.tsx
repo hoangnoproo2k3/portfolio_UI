@@ -47,7 +47,9 @@ export const FeatureWorks = () => {
 	return (
 		<Box component={'section'} pt={2} pb={4}>
 			<Container>
-				<Typography variant="h5">Featured Works</Typography>
+				<Typography variant="h5" mb={3} mt={2}>
+					Featured Works
+				</Typography>
 				<WorkList workList={workList} />
 			</Container>
 		</Box>

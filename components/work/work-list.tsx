@@ -1,6 +1,7 @@
 import { Work } from '@/models'
 import { Box, Divider } from '@mui/material'
 import { Fragment } from 'react'
+import { WorkCard } from '.'
 export interface WorkListProps {
 	workList: Work[]
 }
@@ -10,7 +11,7 @@ export const WorkList = ({ workList }: WorkListProps) => {
 		<Box>
 			{workList.map((work) => (
 				<Fragment key={work.id}>
-					<Box>{work.title}</Box>
+					<WorkCard work={work} />
 					<Divider sx={{ my: 2.5 }} />
 				</Fragment>
 			))}
